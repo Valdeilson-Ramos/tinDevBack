@@ -8,7 +8,7 @@ module.exports = {
         const { user } = req.headers;  //identifica o usuário logado
         const loggedDev = await Dev.findById(user);
 
-        const users = Dev.find({
+        const users = await Dev.find({
 
             $and: [  //operador para que todas as condições seja satifeita simultaneamente.
                 { _id: { $ne: user} }, //o usuário logado não pode listar ele mesmo!

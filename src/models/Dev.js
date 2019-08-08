@@ -1,3 +1,4 @@
+
 const { Schema, model } = require('mongoose');
 
 const DevSchema = new Schema({
@@ -16,11 +17,11 @@ const DevSchema = new Schema({
     },
     likes: [{
         type: Schema.Types.ObjectId,
-        ref: 'Dev',
+        ref: 'Dev'
     }],
     dislikes: [{
         type: Schema.Types.ObjectId,
-        ref: 'Dev',}],
+        ref: 'Dev'}],
 }, {
     timestamps: true,
 });
