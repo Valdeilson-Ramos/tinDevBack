@@ -12,7 +12,7 @@ const connectedUsers = {};
 io.on("connection", socket => {
   const { user } = socket.handshake.query;
 
-  console.log(user, socket.id);
+  //console.log(user, socket.id);
 
   connectedUsers[user] = socket.id;
 });
@@ -32,5 +32,3 @@ app.use(cors());
 app.use(express.json());
 app.use(routes);
 server.listen(3333);
-
-//parei no minuto 23:05
